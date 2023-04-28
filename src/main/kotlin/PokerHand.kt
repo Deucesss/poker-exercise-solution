@@ -11,7 +11,7 @@ sealed class PokerHand(val hand: List<Card>) : Comparable<PokerHand> {
     abstract fun computeWeight(): Int
 
     init {
-        if (hand.size > HAND_COUNT) {
+        if (hand.size != HAND_COUNT) {
             throw Throwable("Invalid Hand: $hand")
         }
     }

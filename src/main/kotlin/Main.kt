@@ -2,13 +2,13 @@ import java.io.File
 import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.Paths
+import java.util.*
 
 fun main(args: Array<String>) {
+    val pathStr = args.first()
 
     var playerA = 0
     var playerB = 0
-
-    val pathStr = args.first()
 
     try {
         Files.readAllLines(Paths.get(pathStr))
@@ -31,3 +31,4 @@ fun main(args: Array<String>) {
         e.printStackTrace()
     }
 }
+
